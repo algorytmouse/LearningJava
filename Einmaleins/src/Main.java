@@ -1,10 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= 10; j++) {
-                System.out.print(i * j + "\t");
-            }
-            System.out.println();
+        int p = 10;
+        int q = 20;
+
+        if (p < q) {
+            int h = p;
+            p = q;
+            q = h;
         }
+
+        int r;
+        while (q != 0) {
+            r = p % q;
+            p = q;
+            q = r;
+        }
+
+        System.out.println(p);
     }
 }
